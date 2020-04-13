@@ -60,11 +60,105 @@ private:
 	}
 	void minus(vector<int> num1, vector<int> num2)
 	{
-
+		if (num1.size() > num2.size())
+		{
+			int temp = num1.size() - 1;
+			for (int a = num2.size(); a > 0; a--)
+			{
+				num1[temp] -= num2[a - 1];
+				if (num1[temp] < 0)
+				{
+					num1[temp] += 10;
+					num1[temp - 1]--;
+				}
+				temp--;
+			}
+			cout << "Answer: ";
+			for (int a = 0; a < num1.size(); a++)
+					cout << num1[a];
+			cout << endl << endl;
+		}
+		else if (num1.size() < num2.size())
+		{
+			vector<int> tempArray = num1;
+			num1 = num2;
+			num2 = tempArray;
+			int temp = num1.size() - 1;
+			for (int a = num2.size(); a > 0; a--)
+			{
+				num1[temp] -= num2[a - 1];
+				if (num1[temp] < 0)
+				{
+					num1[temp] += 10;
+					num1[temp - 1]--;
+				}
+				temp--;
+			}
+			cout << "Answer: -";
+			for (int a = 0; a < num1.size(); a++)
+				cout << num1[a];
+			cout << endl << endl;
+		}
+		else if (num2.size() == num2.size())
+		{
+			for (int a = 0; a < num1.size(); a++)
+			{
+				if (num1[a] == num2[a])
+				{
+					if (a == num1.size() - 1)
+					{
+						cout << "Answer: 0" << endl;
+						break;
+					}
+					continue;
+				}
+				else if (num1[a] < num2[a])
+				{
+					vector<int> tempArray = num1;
+					num1 = num2;
+					num2 = tempArray;
+					int temp = num1.size() - 1;
+					for (int a = num2.size(); a > 0; a--)
+					{
+						num1[temp] -= num2[a - 1];
+						if (num1[temp] < 0)
+						{
+							num1[temp] += 10;
+							num1[temp - 1]--;
+						}
+						temp--;
+					}
+					cout << "Answer: -";
+					for (int a = 0; a < num1.size(); a++)
+						cout << num1[a];
+					cout << endl << endl;
+					break;
+				}
+				else if (num1[a] > num2[a])
+				{
+					int temp = num1.size() - 1;
+					for (int a = num2.size(); a > 0; a--)
+					{
+						num1[temp] -= num2[a - 1];
+						if (num1[temp] < 0)
+						{
+							num1[temp] += 10;
+							num1[temp - 1]--;
+						}
+						temp--;
+					}
+					cout << "Answer: ";
+					for (int a = 0; a < num1.size(); a++)
+						cout << num1[a];
+					cout << endl << endl;
+					break;
+				}
+			}
+		}
 	}
 	void multi(vector<int> num1, vector<int> num2)
 	{
-
+		
 	}
 	void divison(vector<int> num1, vector<int> num2A)
 	{
@@ -116,18 +210,19 @@ int main()
 			system("pause");
 			break;
 		}
-		else if (num1.size() == 1)
-		{
-			if (num1 != "0" || num1 != "1" || num1 != "2" || num1 != "3" || num1 != "4" || num1 != "5" || num1 != "6" || num1 != "7" || num1 != "8" || num1 != "9")
-			{
-				cout << "Error Alt+2+6" << endl;
-				system("pause");
-				break;
-			}
-		}
 		string temp;
 		temp = num1[0];
-		int i = stoi(temp);
+		int i;
+		try
+		{
+			i = stoi(temp);
+		}
+		catch (const std::exception&)
+		{
+			cout << "Error. Is it Alt+2+6?" << endl;
+			system("pause");
+			break;
+		}
 		if (i == 0)
 		{
 			cout << "Try again" << endl;
@@ -137,7 +232,16 @@ int main()
 		string num2;
 		cin >> num2;
 		temp = num2[0];
-		i = stoi(temp);
+		try
+		{
+			i = stoi(temp);
+		}
+		catch (const std::exception&)
+		{
+			cout << "Error. Is it Alt+2+6?" << endl;
+			system("pause");
+			break;
+		}
 		if (i == 0)
 		{
 			cout << "Try again" << endl;
@@ -148,15 +252,6 @@ int main()
 			cout << "Incorrect symbol was detected" << endl;
 			system("pause");
 			break;
-		}
-		else if (num2.size() == 1)
-		{
-			if (num2 != "0" || num2 != "1" || num2 != "2" || num2 != "3" || num2 != "4" || num2 != "5" || num2 != "6" || num2 != "7" || num2 != "8" || num2 != "9")
-			{
-				cout << "Error Alt+2+6" << endl;
-				system("pause");
-				break;
-			}
 		}
 		int option;
 		cout << "Choose your destiny: " << endl;
