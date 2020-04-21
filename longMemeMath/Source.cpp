@@ -158,7 +158,93 @@ private:
 	}
 	void multi(vector<int> num1, vector<int> num2)
 	{
-		
+		vector<int> res;
+		for (int a = 0; a < num1.size() + num2.size() + 5; a++)
+		{
+			res.push_back(0);
+		}
+		if (num1.size() >= num2.size())
+		{
+			int a = 1;
+			int temp = res.size() - a;
+			for (int n2 = num2.size() - 1; n2 >= 0; n2--)
+			{
+				for (int n1 = num1.size() - 1; n1 >= 0; n1--)
+				{
+					res[temp] += num1[n1] * num2[n2];
+					if (res[temp] >= 10)
+					{
+						for (int a = 0; ; a += 10)
+						{
+							if (a > res[temp])
+							{
+								a -= 10;
+								res[temp] -= a;
+								res[temp - 1] += a / 10;
+								break;
+							}
+							continue;
+						}
+					}
+					temp--;
+				}
+				a++;
+				temp = res.size() - a;
+			}
+		}
+		if (num1.size() < num2.size())
+		{
+			vector<int> tempArray = num1;
+			num1 = num2;
+			num2 = tempArray;
+			int a = 1;
+			int temp = res.size() - a;
+			for (int n2 = num2.size() - 1; n2 >= 0; n2--)
+			{
+				for (int n1 = num1.size() - 1; n1 >= 0; n1--)
+				{
+					res[temp] += num1[n1] * num2[n2];
+					if (res[temp] >= 10)
+					{
+						for (int a = 0; ; a += 10)
+						{
+							if (a > res[temp])
+							{
+								a -= 10;
+								res[temp] -= a;
+								res[temp - 1] += a / 10;
+								break;
+							}
+							continue;
+						}
+					}
+					temp--;
+				}
+				a++;
+				temp = res.size() - a;
+			}
+		}
+		cout << "Answer: ";
+		int i = 0;
+		while (1)
+		{
+			if (res[i] == 0)
+				res[i] = ' ';
+			else
+				break;
+			i++;
+			
+		}
+		for (int a = 0; a < res.size(); a++)
+		{
+			if (res[a] == ' ')
+			{
+				cout << "";
+			}
+			else
+				cout << res[a];
+		}
+		cout << endl << endl;
 	}
 	void divison(vector<int> num1, vector<int> num2A)
 	{
