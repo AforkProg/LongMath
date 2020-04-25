@@ -6,16 +6,15 @@ c:\users\user\source\repos\longmememath\longmememath\source.cpp(107): warning C4
 c:\users\user\source\repos\longmememath\longmememath\source.cpp(119): warning C4018: <: несоответствие типов со знаком и без знака
 c:\users\user\source\repos\longmememath\longmememath\source.cpp(162): warning C4018: <: несоответствие типов со знаком и без знака
 c:\users\user\source\repos\longmememath\longmememath\source.cpp(196): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(212): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(288): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(303): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(314): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(318): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(324): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(381): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(385): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(391): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(449): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(477): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\user\source\repos\longmememath\longmememath\source.cpp(484): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(216): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(292): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(316): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(327): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(331): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(337): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(394): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(398): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(404): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(463): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\user\source\repos\longmememath\longmememath\source.cpp(470): warning C4018: <: несоответствие типов со знаком и без знака
   longMemeMath.vcxproj -> C:\Users\User\source\repos\longMemeMath\Debug\longMemeMath.exe
